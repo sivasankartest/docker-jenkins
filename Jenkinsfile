@@ -9,7 +9,7 @@ node {
 
   stage('Create Docker Image') {
     dir('webapp') {
-      sudo docker.build("arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}")
+      docker.build("arungupta/docker-jenkins-pipeline:${env.BUILD_NUMBER}")
     }
   }
 
